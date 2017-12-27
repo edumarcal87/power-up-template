@@ -1,11 +1,11 @@
 {
   "name": "Static Template",
-  "description": "",
-  "details": "A static sample Power-Up hosted on GitHub pages. Feel free to fork [this repository](https://github.com/trello/power-up-template) as a starting point for your own Power-Up.",
+  "description": "Exibição dos formulários de abertura de demandas no board do Trello, sem a necessidade de sair da ferramenta para abertura de novos cards.",
+  "details": "Ferramenta de integração do formulário de abertura de demandas do Google Forms com o Trello.",
   "icon": {
     "url": "./images/logo.png"
   },
-  "author": "Trello Inc",
+  "author": "Eduardo Marçal",
   "capabilities": [
     "authorization-status",
     "attachment-sections",
