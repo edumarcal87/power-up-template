@@ -146,35 +146,14 @@ var boardButtonCallback = function(t){
         callback: function(t){
           return t.modal({            
             url: './modal.html', // The URL to load for the iframe
-            args: { text: 'Hello' }, // Optional args to access later with t.arg('text') on './modal.html'
-            accentColor: '#F2D600', // Optional color for the modal header 
+            args: { text: '' }, // Optional args to access later with t.arg('text') on './modal.html'
+            accentColor: '#026aa7', // Optional color for the modal header 
             height: 500, // Initial height for iframe; not used if fullscreen is true
             fullscreen: true, // Whether the modal should stretch to take up the whole screen
             callback: () => console.log('Goodbye.'), // optional function called if user closes modal (via `X` or escape)
-            title: 'Hello, Modal!', // Optional title for modal header
+            title: 'Abertura de Demandas', // Optional title for modal header
             // You can add up to 3 action buttons on the modal header - max 1 on the right side.
-            actions: [{
-              icon: GRAY_ICON,
-              url: 'https://google.com', // Opens the URL passed to it.
-              alt: 'Leftmost',
-              position: 'left',
-            }
-            , {
-              icon: GRAY_ICON,
-              callback: (tr) => tr.popup({ // Callback to be called when user clicks the action button.
-                title: 'Settings',
-                url: 'settings.html',
-                height: 164,
-              }),
-              alt: 'Second from left',
-              position: 'left',
-            }, {
-              icon: GRAY_ICON,
-              callback: () => console.log('🏎'),
-              alt: 'Right side',
-              position: 'right',
-            }
-            ],
+            actions: [],
           })
         }
       },
@@ -183,35 +162,14 @@ var boardButtonCallback = function(t){
         callback: function(t){
           return t.modal({            
             url: './modal-abn.html', // The URL to load for the iframe
-            args: { text: 'Hello' }, // Optional args to access later with t.arg('text') on './modal.html'
-            accentColor: '#F2D600', // Optional color for the modal header 
+            args: { text: '' }, // Optional args to access later with t.arg('text') on './modal.html'
+            accentColor: '#026aa7', // Optional color for the modal header 
             height: 500, // Initial height for iframe; not used if fullscreen is true
             fullscreen: true, // Whether the modal should stretch to take up the whole screen
             callback: () => console.log('Goodbye.'), // optional function called if user closes modal (via `X` or escape)
-            title: 'Hello, Modal!', // Optional title for modal header
+            title: 'Abertura de Demandas', // Optional title for modal header
             // You can add up to 3 action buttons on the modal header - max 1 on the right side.
-            actions: [{
-              icon: GRAY_ICON,
-              url: 'https://google.com', // Opens the URL passed to it.
-              alt: 'Leftmost',
-              position: 'left',
-            }
-            , {
-              icon: GRAY_ICON,
-              callback: (tr) => tr.popup({ // Callback to be called when user clicks the action button.
-                title: 'Settings',
-                url: 'settings.html',
-                height: 164,
-              }),
-              alt: 'Second from left',
-              position: 'left',
-            }, {
-              icon: GRAY_ICON,
-              callback: () => console.log('🏎'),
-              alt: 'Right side',
-              position: 'right',
-            }
-            ],
+            actions: [],
           })
         }
       }
