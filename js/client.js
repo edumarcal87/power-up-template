@@ -158,7 +158,8 @@ var boardButtonCallback = function(t){
               url: 'https://google.com', // Opens the URL passed to it.
               alt: 'Leftmost',
               position: 'left',
-            }, {
+            }
+            , {
               icon: GRAY_ICON,
               callback: (tr) => tr.popup({ // Callback to be called when user clicks the action button.
                 title: 'Settings',
@@ -172,22 +173,24 @@ var boardButtonCallback = function(t){
               callback: () => console.log('🏎'),
               alt: 'Right side',
               position: 'right',
-            }],
+            }
+            ],
           })
-        }
-      },
-      {
-        text: 'Open Board Bar',
-        callback: function(t){
-          return t.boardBar({
-            url: './board-bar.html',
-            height: 200
-          })
-          .then(function(){
-            return t.closePopup();
-          });
         }
       }
+      // ,
+      // {
+      //   text: 'Open Board Bar',
+      //   callback: function(t){
+      //     return t.boardBar({
+      //       url: './board-bar.html',
+      //       height: 200
+      //     })
+      //     .then(function(){
+      //       return t.closePopup();
+      //     });
+      //   }
+      // }
     ]
   });
 };
@@ -318,14 +321,16 @@ TrelloPowerUp.initialize({
       icon: WHITE_ICON,
       text: 'Popup',
       callback: boardButtonCallback
-    }, {
-      // or we can also have a button that is just a simple url
-      // clicking it will open a new tab at the provided url
-      icon: WHITE_ICON,
-      text: 'URL',
-      url: 'https://trello.com/inspiration',
-      target: 'Inspiring Boards' // optional target for above url
-    }];
+    }
+    // , {
+    //   // or we can also have a button that is just a simple url
+    //   // clicking it will open a new tab at the provided url
+    //   icon: WHITE_ICON,
+    //   text: 'URL',
+    //   url: 'https://trello.com/inspiration',
+    //   target: 'Inspiring Boards' // optional target for above url
+    // }
+    ];
   },
   'card-badges': function(t, options){
     return getBadges(t);
