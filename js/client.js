@@ -177,7 +177,7 @@ var boardButtonCallback = function(t){
             ],
           })
         }
-      }
+      },
       {
         text: 'Demanda de Teste A/B/N',
         callback: function(t){
