@@ -77,7 +77,7 @@ t.getAll();
 */
 
 var GLITCH_ICON = './images/glitch.svg';
-var WHITE_ICON = './images/icon-oi.png';
+var WHITE_ICON = './images/icon-oi.svg';
 var GRAY_ICON = './images/icon-gray.svg';
 
 var randomBadgeColor = function() {
