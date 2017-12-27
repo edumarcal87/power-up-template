@@ -190,63 +190,63 @@ var boardButtonCallback = function(t){
   });
 };
 
-var cardButtonCallback = function(t){
-  // Trello Power-Up Popups are actually pretty powerful
-  // Searching is a pretty common use case, so why reinvent the wheel
-  var items = ['acad', 'arch', 'badl', 'crla', 'grca', 'yell', 'yose'].map(function(parkCode){
-    var urlForCode = 'http://www.nps.gov/' + parkCode + '/';
-    var nameForCode = '🏞 ' + parkCode.toUpperCase();
-    return {
-      text: nameForCode,
-      url: urlForCode,
-      callback: function(t){
-        // In this case we want to attach that park to the card as an attachment
-        // but first let's ensure that the user can write on this model
-        if (t.memberCanWriteToModel('card')){
-          return t.attach({ url: urlForCode, name: nameForCode })
-          .then(function(){
-            // once that has completed we should tidy up and close the popup
-            return t.closePopup();
-          });
-        } else {
-          console.log("Oh no! You don't have permission to add attachments to this card.")
-          return t.closePopup(); // We're just going to close the popup for now.
-        };
-      }
-    };
-  });
+// var cardButtonCallback = function(t){
+//   // Trello Power-Up Popups are actually pretty powerful
+//   // Searching is a pretty common use case, so why reinvent the wheel
+//   var items = ['acad', 'arch', 'badl', 'crla', 'grca', 'yell', 'yose'].map(function(parkCode){
+//     var urlForCode = 'http://www.nps.gov/' + parkCode + '/';
+//     var nameForCode = '🏞 ' + parkCode.toUpperCase();
+//     return {
+//       text: nameForCode,
+//       url: urlForCode,
+//       callback: function(t){
+//         // In this case we want to attach that park to the card as an attachment
+//         // but first let's ensure that the user can write on this model
+//         if (t.memberCanWriteToModel('card')){
+//           return t.attach({ url: urlForCode, name: nameForCode })
+//           .then(function(){
+//             // once that has completed we should tidy up and close the popup
+//             return t.closePopup();
+//           });
+//         } else {
+//           console.log("Oh no! You don't have permission to add attachments to this card.")
+//           return t.closePopup(); // We're just going to close the popup for now.
+//         };
+//       }
+//     };
+//   });
 
-  // we could provide a standard iframe popup, but in this case we
-  // will let Trello do the heavy lifting
-  return t.popup({
-    title: 'Popup Search Example',
-    items: items, // Trello will search client-side based on the text property of the items
-    search: {
-      count: 5, // How many items to display at a time
-      placeholder: 'Search National Parks',
-      empty: 'No parks found'
-    }
-  });
+//   // we could provide a standard iframe popup, but in this case we
+//   // will let Trello do the heavy lifting
+//   return t.popup({
+//     title: 'Popup Search Example',
+//     items: items, // Trello will search client-side based on the text property of the items
+//     search: {
+//       count: 5, // How many items to display at a time
+//       placeholder: 'Search National Parks',
+//       empty: 'No parks found'
+//     }
+//   });
   
-  // in the above case we let Trello do the searching client side
-  // but what if we don't have all the information up front?
-  // no worries, instead of giving Trello an array of `items` you can give it a function instead
-  /*
-  return t.popup({
-    title: 'Popup Async Search',
-    items: function(t, options) {
-      // use options.search which is the search text entered so far
-      // and return a Promise that resolves to an array of items
-      // similar to the items you provided in the client side version above
-    },
-    search: {
-      placeholder: 'Start typing your search',
-      empty: 'Huh, nothing there',
-      searching: 'Scouring the internet...'
-    }
-  });
-  */
-};
+//   // in the above case we let Trello do the searching client side
+//   // but what if we don't have all the information up front?
+//   // no worries, instead of giving Trello an array of `items` you can give it a function instead
+//   /*
+//   return t.popup({
+//     title: 'Popup Async Search',
+//     items: function(t, options) {
+//       // use options.search which is the search text entered so far
+//       // and return a Promise that resolves to an array of items
+//       // similar to the items you provided in the client side version above
+//     },
+//     search: {
+//       placeholder: 'Start typing your search',
+//       empty: 'Huh, nothing there',
+//       searching: 'Scouring the internet...'
+//     }
+//   });
+//   */
+// };
 
 // We need to call initialize to get all of our capability handles set up and registered with Trello
 TrelloPowerUp.initialize({
@@ -331,19 +331,19 @@ TrelloPowerUp.initialize({
     // return getBadges(t);
   },
   'card-buttons': function(t, options) {
-    return [{
-      // usually you will provide a callback function to be run on button click
-      // we recommend that you use a popup on click generally
-      icon: GRAY_ICON, // don't use a colored icon here
-      text: 'Open Popup',
-      callback: cardButtonCallback
-    }, {
-      // but of course, you could also just kick off to a url if that's your thing
-      icon: GRAY_ICON,
-      text: 'Just a URL',
-      url: 'https://developers.trello.com',
-      target: 'Trello Developer Site' // optional target for above url
-    }];
+    // return [{
+    //   // usually you will provide a callback function to be run on button click
+    //   // we recommend that you use a popup on click generally
+    //   // icon: GRAY_ICON, // don't use a colored icon here
+    //   // text: 'Open Popup',
+    //   // callback: cardButtonCallback
+    // }, {
+    //   // but of course, you could also just kick off to a url if that's your thing
+    //   // icon: GRAY_ICON,
+    //   // text: 'Just a URL',
+    //   // url: 'https://developers.trello.com',
+    //   // target: 'Trello Developer Site' // optional target for above url
+    // }];
   },
   'card-detail-badges': function(t, options) {
     // return getBadges(t);
