@@ -317,14 +317,14 @@ TrelloPowerUp.initialize({
       text: 'Abrir Nova Demanda',
       callback: boardButtonCallback
     }
-    // , {
-    //   // or we can also have a button that is just a simple url
-    //   // clicking it will open a new tab at the provided url
-    //   icon: WHITE_ICON,
-    //   text: 'URL',
-    //   url: 'https://trello.com/inspiration',
-    //   target: 'Inspiring Boards' // optional target for above url
-    // }
+    , {
+      // or we can also have a button that is just a simple url
+      // clicking it will open a new tab at the provided url
+      icon: './images/logo.png',
+      text: 'Reunião de Status',
+      url: 'https://appear.in/dp6',
+      target: '' // optional target for above url
+    }
     ];
   },
   'card-badges': function(t, options){
