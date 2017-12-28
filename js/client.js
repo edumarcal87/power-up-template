@@ -323,7 +323,7 @@ TrelloPowerUp.initialize({
       icon: './images/logo.png',
       text: 'Reunião de Status',
       url: 'https://appear.in/dp6',
-      target: '' // optional target for above url
+      target: 'blank' // optional target for above url
     }
     ];
   },
