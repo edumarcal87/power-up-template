@@ -325,6 +325,14 @@ TrelloPowerUp.initialize({
       url: 'https://appear.in/dp6',
       target: 'blank' // optional target for above url
     }
+    , {
+      // or we can also have a button that is just a simple url
+      // clicking it will open a new tab at the provided url
+      icon: WHITE_ICON,
+      text: 'Board - Oi Interno',
+      url: 'https://trello.com/b/o96A4oah/oi-demandas',
+      target: 'blank' // optional target for above url
+    }
     ];
   },
   'card-badges': function(t, options){
