@@ -1,7 +1,7 @@
 {
-  "name": "Static Template",
+  "name": "DP6 - Oi - Google Form to Trello",
   "description": "",
-  "details": "A static sample Power-Up hosted on GitHub pages. Feel free to fork [this repository](https://github.com/trello/power-up-template) as a starting point for your own Power-Up.",
+  "details": "formulário de abertura de demandas no board do trello.",
   "icon": {
     "url": "./images/logo.png"
   },
