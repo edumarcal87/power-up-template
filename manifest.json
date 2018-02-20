@@ -1,5 +1,5 @@
 {
-  "name": "Static Template",
+  "name": "DP6 - Oi - Google Form to Trello",
   "description": "Exibição dos formulários de abertura de demandas no board do Trello, sem a necessidade de sair da ferramenta para abertura de novos cards.",
   "details": "Ferramenta de integração do formulário de abertura de demandas do Google Forms com o Trello.",
   "icon": {
