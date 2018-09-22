@@ -156,23 +156,24 @@ var boardButtonCallback = function(t){
             actions: [],
           })
         }
-      },
-      {
-        text: 'Demanda de Teste A/B/N',
-        callback: function(t){
-          return t.modal({            
-            url: './modal-abn.html', // The URL to load for the iframe
-            args: { text: '' }, // Optional args to access later with t.arg('text') on './modal.html'
-            accentColor: '#026aa7', // Optional color for the modal header 
-            height: 500, // Initial height for iframe; not used if fullscreen is true
-            fullscreen: true, // Whether the modal should stretch to take up the whole screen
-            callback: () => console.log('Goodbye.'), // optional function called if user closes modal (via `X` or escape)
-            title: 'Abertura de Demandas', // Optional title for modal header
-            // You can add up to 3 action buttons on the modal header - max 1 on the right side.
-            actions: [],
-          })
-        }
       }
+      // ,
+      // {
+      //   text: 'Demanda de Teste A/B/N',
+      //   callback: function(t){
+      //     return t.modal({            
+      //       url: './modal-abn.html', // The URL to load for the iframe
+      //       args: { text: '' }, // Optional args to access later with t.arg('text') on './modal.html'
+      //       accentColor: '#026aa7', // Optional color for the modal header 
+      //       height: 500, // Initial height for iframe; not used if fullscreen is true
+      //       fullscreen: true, // Whether the modal should stretch to take up the whole screen
+      //       callback: () => console.log('Goodbye.'), // optional function called if user closes modal (via `X` or escape)
+      //       title: 'Abertura de Demandas', // Optional title for modal header
+      //       // You can add up to 3 action buttons on the modal header - max 1 on the right side.
+      //       actions: [],
+      //     })
+      //   }
+      // }
       // ,
       // {
       //   text: 'Open Board Bar',
@@ -317,22 +318,22 @@ TrelloPowerUp.initialize({
       text: 'Abrir Nova Demanda',
       callback: boardButtonCallback
     }
-    , {
-      // or we can also have a button that is just a simple url
-      // clicking it will open a new tab at the provided url
-      icon: './images/logo.png',
-      text: 'Reunião de Status',
-      url: 'https://appear.in/dp6',
-      target: 'blank' // optional target for above url
-    }
-    , {
-      // or we can also have a button that is just a simple url
-      // clicking it will open a new tab at the provided url
-      icon: WHITE_ICON,
-      text: 'Board - Oi Interno',
-      url: 'https://trello.com/b/o96A4oah/oi-demandas',
-      target: 'blank' // optional target for above url
-    }
+    // , {
+    //   // or we can also have a button that is just a simple url
+    //   // clicking it will open a new tab at the provided url
+    //   icon: './images/logo.png',
+    //   text: 'Reunião de Status',
+    //   url: 'https://appear.in/dp6',
+    //   target: 'blank' // optional target for above url
+    // }
+    // , {
+    //   // or we can also have a button that is just a simple url
+    //   // clicking it will open a new tab at the provided url
+    //   icon: WHITE_ICON,
+    //   text: 'Board - Oi Interno',
+    //   url: 'https://trello.com/b/o96A4oah/oi-demandas',
+    //   target: 'blank' // optional target for above url
+    // }
     ];
   },
   'card-badges': function(t, options){
